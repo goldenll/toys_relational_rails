@@ -1,24 +1,11 @@
-# README
+# Relational Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Learning Goals
+- Design a one-to-many relationship using a schema designer.
+- Write migrations to create tables with columns of varying data types and foreign keys.
+- Use Rails to create web pages that allow users to CRUD resources.
+- Create instance and class methods on a Rails model that use ActiveRecord methods and helpers.
+- Write model and feature tests that fully cover data logic and user behavior.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Requirements
+- Use Rails 7.0.1, Ruby 3.1.1, PostgreSQL
