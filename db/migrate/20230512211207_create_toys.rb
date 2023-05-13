@@ -4,7 +4,8 @@ class CreateToys < ActiveRecord::Migration[7.0]
       t.string :name
       t.integer :play_count
       t.boolean :age_appropriate
-      t.references :box, null: false, foreign_key: true
+      t.references :box, foreign_key: true
+      # t.references :box, null: false, foreign_key: true
 
       t.timestamps
     end
