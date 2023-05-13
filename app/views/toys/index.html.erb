@@ -1,0 +1,6 @@
+<h1> Toys </h1>
+<% @toys.each do |toy| %>
+  <h3>Name: <%= toy.name %></h3>
+  <p>Play Count: <%= toy.play_count %></p>
+  <p>Age Appropriate? <%= toy.age_appropriate %></p>
+<% end %>

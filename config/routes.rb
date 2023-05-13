@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   get '/boxes', to: 'boxes#index'
   get '/boxes/:id', to: 'boxes#show'
+  get '/toys', to: 'toys#index'
 end
