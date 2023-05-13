@@ -7,3 +7,4 @@ RSpec.describe Box, type: :model do
 end
 
 # bundle exec rspec 
+
