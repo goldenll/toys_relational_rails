@@ -13,7 +13,6 @@ RSpec.describe "/toys", type: :feature do
       expect(page).to have_content(toy1.name)
       expect(page).to have_content(toy1.play_count)
       expect(page).to have_content(toy1.age_appropriate)
-
       expect(page).to_not have_content(toy2.name)
     end
   end
