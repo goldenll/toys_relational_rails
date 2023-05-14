@@ -4,7 +4,6 @@ class ToysController < ApplicationController
   end
 
   def show
-    # require 'pry'; binding.pry
     @toy = Toy.find(params[:id])
   end
 end

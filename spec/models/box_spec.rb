@@ -5,6 +5,3 @@ RSpec.describe Box, type: :model do
     it { should have_many :toys }
   end
 end
-
-# bundle exec rspec 
-

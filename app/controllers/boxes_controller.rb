@@ -4,7 +4,6 @@ class BoxesController < ApplicationController
   end
 
   def show
-    # require 'pry'; binding.pry
     @box = Box.find(params[:id])
   end
 end
