@@ -1,7 +1,6 @@
 <h1> Boxes </h1>
 <% @boxes.each do |box| %>
-  <p><%= box.name %>
-  <%= box.created_at %></p>
+  <p><%= box.name %> created at: <%= box.created_at %></p>
 <% end %>
 
 <%= link_to "New Box", "/boxes/new" %>
