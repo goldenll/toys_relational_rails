@@ -13,6 +13,7 @@ RSpec.describe "the /boxes/:id page" do
       expect(page).to have_content(box1.capacity)
       expect(page).to have_content(box1.full)
       expect(page).to_not have_content(box2.name)
+      
     end
 
     # User Story 7, Parent Child Count
@@ -26,8 +27,7 @@ RSpec.describe "the /boxes/:id page" do
 
       visit "/boxes/#{box1.id}"
       
-      expect(page).to have_content(Count: 2)
-
+      expect(page).to have_content("Count: 2")
     end
   end
 end

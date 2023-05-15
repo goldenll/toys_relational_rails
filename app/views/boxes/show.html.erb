@@ -1,16 +1,4 @@
 <h3><%= @box.name %></h3>
   <p>Capacity: <%= @box.capacity %> </p>
   <p>Full? <%= @box.full %> </p>
-  <p>Count: <%= @box.full %> </p>
-
-
-
-  <% @boxes.each do |box| %>
-    <h1><%= box.name %> Toybox</h1>
-  <% end %>
-  <% @toys.each do |toy| %>
-    <h3><%= toy.name %></h3>
-    <p>Play Count: <%= toy.play_count %></p>
-    <p>Age Appropriate? <%= toy.age_appropriate %></p>
-  <% end %>
-  
+  <p>Count: <%= @box.toys.count %> </p>
