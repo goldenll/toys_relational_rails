@@ -11,16 +11,19 @@ RSpec.describe "/boxes", type: :feature do
     # Then a `POST` request is sent to the '/parents' route,
     # a new parent record is created,
     # and I am redirected to the Parent Index page where I see the new Parent displayed.
-    xit "has a link to create a new Box record" do
+    it "has a link to create a new Box record" do
       visit "/boxes"
 
       click_link "New Box"
 
       expect(current_path).to eq("/boxes/new")
-
+      save_and_open_page
+      
       fill_in "Name", with: "Toy Room"
+      fill_in "Capacity", with: "200"
+      fill_in "Full?", with: "false"
       click_on "Create Box"
-
+      
       expect(current_path).to eq("/boxes")
       expect(page).to have_content("New Box")
     end
