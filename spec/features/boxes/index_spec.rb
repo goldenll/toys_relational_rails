@@ -19,11 +19,11 @@ RSpec.describe "/boxes", type: :feature do
       box2 = Box.create!(name: "Living Room", capacity: 50, full: true)
       
       visit "/boxes"
-#need test for sort
+#!!!need test for sort!!!!!!!!!!!
       # expect(page).to 
       expect(page).to have_content(box1.created_at)
       expect(page).to have_content(box2.created_at)
-      save_and_open_page
+      # save_and_open_page
     end
   end
 end
