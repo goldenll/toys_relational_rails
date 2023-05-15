@@ -41,7 +41,6 @@ RSpec.describe "the /boxes/:id page" do
       toy4 = Toy.create!(name: "race car", play_count: 57, age_appropriate: true, box: box2)
 
       visit "/boxes/#{box1.id}"
-      save_and_open_page
       expect(page).to have_content("Toybox Index Page")
     end
   end

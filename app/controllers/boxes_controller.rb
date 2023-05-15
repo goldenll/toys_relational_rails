@@ -7,4 +7,12 @@ class BoxesController < ApplicationController
   def show
     @box = Box.find(params[:id])
   end
+
+  def new
+  end
+
+  def create 
+    Box.create!(name: params[:name])
+    redirect_to "/boxes"
+  end
 end

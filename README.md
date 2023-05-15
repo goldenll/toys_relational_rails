@@ -75,8 +75,6 @@ Then I see a link to take me to that parent's `child_table_name` page ('/parents
 Iteration 2
 CRUD
 
-
-
 User Story 11, Parent Creation 
 As a visitor
 When I visit the Parent Index page
