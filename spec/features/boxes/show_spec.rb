@@ -29,5 +29,20 @@ RSpec.describe "the /boxes/:id page" do
       
       expect(page).to have_content("Count: 2")
     end
+
+    # User Story 10, Parent Child Index Link
+    # Then I see a link to take me to that parent's `child_table_name` page ('/parents/:id/child_table_name')
+    it "has a link that takes me to that box's toy page" do 
+      box1 = Box.create!(name: "Bedroom", capacity: 100, full: false)
+      box2 = Box.create!(name: "Living Room", capacity: 50, full: true)
+      toy1 = box1.toys.create!(name: "fire truck", play_count: 35, age_appropriate: true)
+      toy2 = Toy.create!(name: "red ball", play_count: 75, age_appropriate: true, box: box1)
+      toy3 = Toy.create!(name: "green ball", play_count: 100, age_appropriate: true, box: box2)
+      toy4 = Toy.create!(name: "race car", play_count: 57, age_appropriate: true, box: box2)
+
+      visit "/boxes/#{box1.id}"
+      save_and_open_page
+      expect(page).to have_content("Toybox Index Page")
+    end
   end
 end
