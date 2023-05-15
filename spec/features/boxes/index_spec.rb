@@ -23,20 +23,6 @@ RSpec.describe "/boxes", type: :feature do
       # expect(page).to 
       expect(page).to have_content(box1.created_at)
       expect(page).to have_content(box2.created_at)
-      # save_and_open_page
-    end
-
-    # User Story 11, Parent Creation 
-    # Then I see a link to create a new Parent record, "New Parent"
-    # When I click this link
-    # Then I am taken to '/parents/new' where I  see a form for a new parent record
-    # When I fill out the form with a new parent's attributes:
-    # And I click the button "Create Parent" to submit the form
-    # Then a `POST` request is sent to the '/parents' route,
-    # a new parent record is created,
-    # and I am redirected to the Parent Index page where I see the new Parent displayed.
-    it "has a link to create a new Box record, "New Box" which takes me to a form" do
-      
     end
   end
 end
