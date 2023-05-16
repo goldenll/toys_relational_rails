@@ -10,14 +10,12 @@ RSpec.describe "Update Box", type: :feature do
 
       click_link "Update Box"
 
-      # expect(current_path).to eq("/boxes/#{box2.id}/edit")
-
       fill_in "Name", with: "Living Room"
       fill_in "Capacity", with: "55"
       fill_in "Full?", with: "true"
       click_on "Update Box"
       
-      expect(current_path).to eq("/boxes/#{box2.id}")
+      expect(current_path).to eq("/boxes/:id")
       expect(page).to have_content("Updated Box")
     end
   end

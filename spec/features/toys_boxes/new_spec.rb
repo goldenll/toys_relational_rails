@@ -20,13 +20,12 @@ RSpec.describe "New ToyBox", type: :feature do
       fill_in "Name", with: "excavator"
       fill_in "play_count", with: "200"
       fill_in "age_appropriate", with: "true"
-      
+
       click_on "Create Toy"
       
       expect(current_path).to eq("/boxes/:id/toys")
       expect(page).to have_content(box2.name)
       expect(page).to have_content("excavator")
-      save_and_open_page
     end
   end
 end
