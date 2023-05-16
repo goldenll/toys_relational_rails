@@ -1,4 +1,4 @@
-<%= form_with url: "/boxes/:id/toys/new", method: :post, local: true do |form| %>
+<%= form_with url: "/boxes/#{@box.id}/toys", method: :post, local: true do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
   <%= form.label :play_count %>

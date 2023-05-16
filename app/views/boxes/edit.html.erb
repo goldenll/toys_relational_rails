@@ -1,10 +1,10 @@
-<%= form_with url: "/boxes/:id", method: :post, local: true do |form| %>
+<%= form_with url: "/boxes/#{@box.id}", method: :patch, local: true do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
   <%= form.label :capacity %>
   <%= form.text_field :capacity %>
-  <%= form.label :Full? %>
-  <%= form.text_field :Full? %>
+  <%= form.label :full, "Full?" %>
+  <%= form.text_field :full %>
   
   <%= form.submit "Update Box" %>
 <% end %>

@@ -1,7 +1,7 @@
-<a href="/boxes/:id/toys">Toybox Index Page</a>
+<a href="/boxes/#{@box.id}/toys">Toybox Index Page</a>
 <h3><%= @box.name %></h3>
   <p>Capacity: <%= @box.capacity %> </p>
   <p>Full? <%= @box.full %> </p>
   <p>Count: <%= @box.toys.count %> </p>
 
-<%= link_to "Update Box", "/boxes/:id/edit" %>
+<%= link_to "Update Box", "/boxes/#{@box.id}/edit" %>

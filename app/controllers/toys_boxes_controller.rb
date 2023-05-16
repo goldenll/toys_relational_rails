@@ -9,8 +9,13 @@ class ToysBoxesController < ApplicationController
 
   def create
     # require 'pry'; binding.pry
-    Box.create!(name: params[:name])
+    box = Box.find(params[:id])
+    toys = box.toys.create!(toys_params)
     # @toys = Toy.all
-    redirect_to "/boxes/:id/toys"
+    redirect_to "/boxes/#{box.id}/toys"
+  end
+  private 
+  def toys_params
+    params.permit(:name, :play_count, :age_appropriate)
   end
 end
