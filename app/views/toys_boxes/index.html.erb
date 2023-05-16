@@ -6,3 +6,5 @@
   <p>Play Count: <%= toy.play_count %></p>
   <p>Age Appropriate? <%= toy.age_appropriate %></p>
 <% end %>
+
+<%= link_to "Create Toy", "/boxes/#{@box.id}/toys/new" %>

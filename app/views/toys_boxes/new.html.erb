@@ -1,0 +1,11 @@
+<%= form_with url: "/boxes/#{@box.id}/toys", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :play_count %>
+  <%= form.text_field :play_count %>
+  <%= form.label :age_appropriate %>
+  <%= form.text_field :age_appropriate %>
+  
+  <%= form.submit "Create Toy" %>
+<% end %>
+

@@ -1,0 +1,10 @@
+<%= form_with url: "/toys/#{@toy.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :play_count, "Play Count" %>
+  <%= form.text_field :play_count %>
+  <%= form.label :age_appropriate, "Age Appropriate?" %>
+  <%= form.check_box :age_appropriate %>
+  
+  <%= form.submit "Update Toy" %>
+<% end %>
