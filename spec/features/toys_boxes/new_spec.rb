@@ -6,7 +6,7 @@ RSpec.describe "New ToyBox", type: :feature do
 
     # a new child object/row is created for that parent,
     # and I am redirected to the Parent Childs Index page where I can see the new child listed
-    xit "has a link to create a new ToyBox record" do
+    it "has a link to create a new ToyBox record" do
       box2 = Box.create!(name: "Living Room", capacity: 50, full: true)
       toy3 = Toy.create!(name: "green ball", play_count: 100, age_appropriate: true, box: box2)
       toy4 = Toy.create!(name: "race car", play_count: 57, age_appropriate: true, box: box2)
@@ -14,8 +14,7 @@ RSpec.describe "New ToyBox", type: :feature do
       visit "/boxes/#{box2.id}/toys"
 
       click_link "Create Toy"
-
-      expect(current_path).to eq("/boxes/:id/toys/new")
+      expect(current_path).to eq("/boxes/#{box2.id}/toys/new")
 
       fill_in "Name", with: "excavator"
       fill_in "play_count", with: "200"

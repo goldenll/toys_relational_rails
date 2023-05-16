@@ -7,4 +7,4 @@
   <p>Age Appropriate? <%= toy.age_appropriate %></p>
 <% end %>
 
-<%= link_to "Create Toy", "/boxes/:id/toys/new" %>
+<%= link_to "Create Toy", "/boxes/#{@box.id}/toys/new" %>

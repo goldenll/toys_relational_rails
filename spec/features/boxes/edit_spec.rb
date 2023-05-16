@@ -17,7 +17,6 @@ RSpec.describe "Update Box", type: :feature do
       
       expect(current_path).to eq("/boxes/#{box2.id}")
       expect(page).to have_content("55")
-      save_and_open_page
     end
   end
 end
