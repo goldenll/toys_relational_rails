@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   patch "/boxes/:id", to: "boxes#update"
   get "/boxes/:id/toys", to: "toys_boxes#edit"
   get "/boxes/:id/toys/new", to: "toys_boxes#new"
+  post "/boxes/:id/toys", to: "toys_boxes#create"
   post "/boxes/:id/toys/new", to: "toys_boxes#create"
 end
