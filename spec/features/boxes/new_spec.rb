@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "/boxes", type: :feature do 
+RSpec.describe "New Box", type: :feature do 
   describe "as a visitor, when I visit the boxes index page" do
     # User Story 11, Parent Creation 
     it "has a link to create a new Box record" do

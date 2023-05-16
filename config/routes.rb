@@ -10,4 +10,9 @@ Rails.application.routes.draw do
   get "/boxes/:id/toys", to: "toys_boxes#index"
   get "/boxes/:id", to: "boxes#show"
   post "/boxes", to: "boxes#create"
+  get "/boxes/:id/edit", to: "resources#edit"
+  patch "/boxes/:id", to: "boxes#update"
+  get "/boxes/:id/toys", to: "toys_boxes#edit"
+  get "/boxes/:id/toys/new", to: "toys_boxes#new"
+  post "/boxes/:id/toys/new", to: "toys_boxes#create"
 end

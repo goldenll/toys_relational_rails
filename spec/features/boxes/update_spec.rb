@@ -1,21 +1,24 @@
 require "rails_helper"
 
-RSpec.describe "/boxes", type: :feature do 
-  describe "as a visitor, when I visit the boxes index page" do
+RSpec.describe "Update Box", type: :feature do 
+  describe "as a visitor, when I visit the boxes show page" do
 # User Story 12, Parent Update 
-# As a visitor
-# When I visit a parent show page
-# Then I see a link to update the parent "Update Parent"
-# When I click the link "Update Parent"
-# Then I am taken to '/parents/:id/edit' where I  see a form to edit the parent's attributes:
-# When I fill out the form with updated information
-# And I click the button to submit the form
-# Then a `PATCH` request is sent to '/parents/:id',
-# the parent's info is updated,
-# and I am redirected to the Parent's Show page where I see the parent's updated info
+    xit "has a link to update Box record" do
+      box2 = Box.create!(name: "Living Room", capacity: 50, full: true)
+      
+      visit "/boxes/#{box2.id}"
 
-    it "has a link to create a new Box record" do
+      click_link "Update Box"
 
+      # expect(current_path).to eq("/boxes/#{box2.id}/edit")
+
+      fill_in "Name", with: "Living Room"
+      fill_in "Capacity", with: "55"
+      fill_in "Full?", with: "true"
+      click_on "Update Box"
+      
+      expect(current_path).to eq("/boxes/#{box2.id}")
+      expect(page).to have_content("Updated Box")
     end
   end
 end

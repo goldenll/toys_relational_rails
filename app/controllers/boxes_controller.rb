@@ -15,4 +15,10 @@ class BoxesController < ApplicationController
     Box.create!(name: params[:name])
     redirect_to "/boxes"
   end
+
+  def edit
+  end
+
+  # def update
+  # end
 end
