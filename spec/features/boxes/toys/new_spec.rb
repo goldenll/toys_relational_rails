@@ -3,9 +3,6 @@ require "rails_helper"
 RSpec.describe "New ToyBox", type: :feature do 
   describe "as a visitor, when I visit the boxes index page" do
     # User Story 13, Parent Child Creation 
-
-    # a new child object/row is created for that parent,
-    # and I am redirected to the Parent Childs Index page where I can see the new child listed
     it "has a link to create a new ToyBox record" do
       box2 = Box.create!(name: "Living Room", capacity: 50, full: true)
       toy3 = Toy.create!(name: "green ball", play_count: 100, age_appropriate: true, box: box2)
@@ -28,8 +25,3 @@ RSpec.describe "New ToyBox", type: :feature do
     end
   end
 end
-
-
-
-
-
